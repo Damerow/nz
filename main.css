@@ -31,7 +31,7 @@ main {
 }
 /* Alle Kinder in Artikel bekommen eine "Polsterung"/ Schatten mit 1 Element, also einem Buchstaben Abstand*/
 article {
-    padding: 1em;
+    padding: 1em; /* M ist ein breiter Buchstabe -> wurde vom analogen Schreiben übernommen*/
 }
 /* Schriftart Beschreibungstext -> Änderung der Übeschriften. Schriftart von Christian Robertson*/
 article p {
@@ -49,19 +49,19 @@ article h3 {
 article figure>img {
     width: 100%;
 }
-
+/* spezifisches Element -> bezieht sich auf id in HTML*/
 #map {
     width: 90%;
     height: 600px;
     border: 1px solid silver;
     margin: auto;
 }
-
+/* Padding der Reihe nach: 1m ist Oben, 2em zweiter. Rechts, unten, links */
 footer {
     text-align: center;
     padding: 1em 2em 3em 2em;
 }
-
+/* Mit Grid werden Spalten definiert, sind 40% am Anfang breit, dann 20% und dann rechts 40% */
 footer nav {
     display: grid;
     grid-template-columns: 40% 20% 40%;
