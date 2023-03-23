@@ -71,15 +71,13 @@ a {
     color: black;
 }
 
-header>img,
-figure>img,
-#map {
+.shadow {
     box-shadow:
         0 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
-
+/* Media bestimmt wie die Seiten auf allen Bildschirmen (Handy, Tablet etc.) dargestellt werden sollen. Border werden weggenommen -> Karte soll auf 100% ersetzt werden*/
 @media screen and (max-width: 1280px) {
     main {
         border: none;
