@@ -2,24 +2,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Open+Sans:ital@0;1&family=Roboto:wght@300&display=swap');
 
+/* Schriftart, Hintergrundfarbe, Maximale Breite der Seite, Automatische Zentrierung aller Inhalte */
 body {
     font-family: 'Open Sans', sans-serif;
     background-color: #ffffff;
     max-width: 1280px;
     margin: auto;
 }
-
+/* Alle Bilder die direkt unter header stehen werde mit > ausgewählt. Bild als Kind des headers mit einer maximalen Breite von 100% (also 1280px!)  */
 header>img {
     max-width: 100%;
 }
-
+/* Kleiner Avatar wird rund (Ecken werden zu 50% abgerundet), dann zentriert Bild horizontal im Container, und um 50px nach oben verschoben (da das Bild 100px groß ist) in das Bild hinein */
 header a img {
     border-radius: 50%;
     display: block;
     margin: auto;
     margin-top: -50px;
 }
-
+/* Maximale Weite des Containers, Zentrierung von main-Kindern, um 25px nach oben verrücken, gepunktete silberne Linie mit 1px Breite */
 main {
     max-width: 1024px;
     margin: auto;
@@ -28,17 +29,17 @@ main {
     border-right: 1px dashed silver;
     border-bottom: 1px dashed silver;
 }
-
+/* Alle Kinder in Artikel bekommen eine "Polsterung"/ Schatten mit 1 Element, also einem Buchstaben Abstand*/
 article {
     padding: 1em;
 }
-
+/* Schriftart Beschreibungstext -> Änderung der Übeschriften. Schriftart von Christian Robertson*/
 article p {
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     line-height: 1.2em;
 }
-
+/* 	Julieta Ulanovsky */
 article h1,
 article h2,
 article h3 {
