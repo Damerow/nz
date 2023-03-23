@@ -11,17 +11,26 @@
         integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
-        <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
 </head>
 
 <body>
+    <!-- cdnjs.com  für Fonts -->
+    <!-- https://fontawesome.com/search?s=solid&f=sharp&o=r für Symbole-->
 
     <!-- Kommentar in html-->
 
     <header>
         <img class="shadow" src="images/header2.jpg" alt="Leuchtturm bei Wellington">
         <a href="https://github.com/Damerow/nz.git">
-        <img src="images/user.jpg" alt="User Bild - Typischer Vogel aus Neuseeland"></a>
+            <img src="images/user.jpg" alt="User Bild - Typischer Vogel aus Neuseeland"></a>
         <!-- Bildquelle: https://pixabay.com/images/id-1642435/-->
     </header>
     <main>
@@ -39,20 +48,21 @@
                 <br>
                 Die Stadt Wellington selbst hat rund 190.000 Einwohner. <br>
                 <br>
-                (Quelle: <a href="https://de.wikipedia.org/wiki/Wellington">Wikipedia</a> )
+                (Quelle:  <a href="https://de.wikipedia.org/wiki/Wellington">Wikipedia </a> )
+                
 
             </p>
             <figure>
                 <img src="images/attraction.jpg.jpg" alt="Bild Cabel Car in Wellington Hauptstadt">
                 <figcaption>Bild Cabel Car in Wellington - Hauptstadt von Neuseeland
-                    (Quelle: <a href="https://pixabay.com/images/id-2144119/">barni1-773830@pixabay</a>)
+                    (Quelle: <a href="https://pixabay.com/images/id-2144119/">barni1-773830@pixabay</a> <i class="fa-sharp fa-solid fa-camera-retro"></i>)
                 </figcaption>
             </figure>
 
 
             <h3>Übersichtskarte</h3>
 
-            <div id="map" class="shadow" ></div>
+            <div id="map" class="shadow"></div>
 
             <h3>Abgrenzende Städte zu Wellington</h3>
             <ul>
@@ -67,10 +77,10 @@
     </main>
     <footer>
         <nav>
-            <a href="https://lauramap.github.io/nz">vorherige Etappe 🡨</a>
+            <a href="https://lauramap.github.io/nz">vorherige Etappe</i><i class="fa-sharp fa-solid fa-arrow-left-long"></i></a> 
             <span>Wellington</span>
-            <a href="https://webmapping.github.io/nz">🡪 nächste Etappe </a>
-            
+            <a href="https://webmapping.github.io/nz"> <i class="fa-sharp fa-solid fa-arrow-right-long"></i> nächste Etappe</a> 
+
 
         </nav>
     </footer>
