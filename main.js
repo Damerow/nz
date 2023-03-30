@@ -106,29 +106,41 @@ const STOPS = [
         wikipedia: "https://de.wikipedia.org/wiki/Auckland"
     }];
 
+// geschweifte Klammer für Objekte verwenden!
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom); //Koordinaten immer als fixe Zahl
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+// Verschiedene Karten Layer http://leaflet-extras.github.io/leaflet-providers/preview/index.html 
+// GIthub Seite https://github.com/leaflet-extras/leaflet-providers
+let watercolor = L.tileLayer.provider('Stamen.Watercolor');
+
+let osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
+
+let OpenTopoMap = L.tileLayer.provider('OpenTopoMap').addTo(map)
+
+L.control.layers({
+    "Openstreetmap": osm,
+    "Watercolor": watercolor,
+    "OpenTopoMap": OpenTopoMap,
 }).addTo(map);
-L.control.scale({imperial: false, maxWidth: 200, position:"topright"}).addTo(map)
+
+L.control.scale({ imperial: false, maxWidth: 200, position: "topright" }).addTo(map)
 // Vorschleife:
 // für jedes Element im Array wird das in der {} gemacht
 for (let stop of STOPS) {
     // Marker für den Stop
     let marker = L.marker([stop.lat, stop.lng], {
-        opacity: 0.5, 
-    
+        opacity: 0.5,
+
     }).addTo(map)
         .bindPopup(`<h3>${stop.title}</h3>
         <a href="${stop.wikipedia}">Wikipedia</a>`
-        
-        ); 
-        if (stop.user == "damerow") {
-            marker.openPopup ();
-            console.log("Mein Marker: ", stop);
-        
+
+        );
+    if (stop.user == "damerow") {
+        marker.openPopup();
+        console.log("Mein Marker: ", stop);
+
         // Zwei Ist-gleich-Zeichen! Überprüfung ob beide Werte auf beiden Seiten stimmen
 
     }
