@@ -90,14 +90,14 @@ const STOPS = [
         lat: -39.2,
         lng: 175.583333,
         wikipedia: "https://de.wikipedia.org/wiki/Tongariro-Nationalpark"
-    }, 
+    },
     {
         title: "Rotorua",
         user: "juba1508",
         lat: "-38.136944",
         lng: "176.250833",
         wikipedia: "https://de.wikipedia.org/wiki/Rotorua"
-    }, 
+    },
     {
         title: "Auckland",
         user: "madeleinehll",
@@ -114,13 +114,18 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 
-    // für jedes Element im Array wird das in der {} gemacht
+// für jedes Element im Array wird das in der {} gemacht
 for (let stop of STOPS) {
     // Marker für den Stop
+    let marker = L.marker([stop.lat, stop.lng]).addTo(map)
+        .bindPopup(stop.title); 
+        if (stop.user == "damerow") {
+            marker.openPopup ();
+            console.log("Mein Marker: ", stop);
+        
+        // Zwei Ist-gleich-Zeichen! Überprüfung ob beide Werte auf beiden Seiten stimmen
 
-L.marker([stop.lat, stop.lng]).addTo(map)
-    .bindPopup(stop.title)
-    .openPopup();
+    }
 
 }
 
