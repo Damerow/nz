@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!-- HTML ist das Gerüst/Struktur/Formatierung, Css ist der Stye und den Programmcode von JAVA sagt wie das ausgeführt werden soll und mit Browser kommuniziert wird-->
 <html lang="de">
 
 <head>
@@ -12,11 +13,11 @@
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script> <!-- Attribut defer notwendig, damit das JAVA Script erst am Ende geladen wird! Sonst Fehler!-->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
         integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 
 
 </head>
@@ -95,20 +96,6 @@
 
         </nav>
     </footer>
-
-    <script>
-        // Kommentar in Java-Script mit Slash-Slash
-        var map = L.map('map').setView([-41.2875, 174.776111], 12);
-
-        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
-
-        L.marker([-41.2875, 174.776111]).addTo(map)
-            .bindPopup('Die Hauptstadt von Neuseeland<br> <strong>Wellington</strong>.')
-            .openPopup();
-    </script>
-
 </body>
 
 </html>
