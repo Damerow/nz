@@ -10,12 +10,14 @@ let title = 'Die Hauptstadt von Neuseeland<br><strong>Wellington</strong>.';
 // Variablen sind let fangen nie mit Zahlen oder Sonderzeichen an
 // konst sind konstanten
 
-const STOPS = ["Picton", "Die Hauptstadt von Neuseeland", "Tongariro-Nationalpark"];
+const STOPS = ["Picton", {
+    title: "Die Hauptstadt von Neuseeland Wellington",
+    user: "damerow",
+    lat: -41.2875,
+    lng: 174.7761,
+    Wikipedia: "https://de.wikipedia.org/wiki/Wellington",                
+}, "Tongariro-Nationalpark"];
 console.log (STOPS);
-console.log (STOPS[0]);
-console.log (STOPS[1]);
-console.log (STOPS[2]);
-console.log (STOPS.length);
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom); //Koordinaten immer als fixe Zahl
 
