@@ -10,6 +10,13 @@ let title = 'Die Hauptstadt von Neuseeland<br><strong>Wellington</strong>.';
 // Variablen sind let fangen nie mit Zahlen oder Sonderzeichen an
 // konst sind konstanten
 
+const STOPS = ["Picton", "Die Hauptstadt von Neuseeland", "Tongariro-Nationalpark"];
+console.log (STOPS);
+console.log (STOPS[0]);
+console.log (STOPS[1]);
+console.log (STOPS[2]);
+console.log (STOPS.length);
+
 let map = L.map('map').setView([stop_lat, stop_lng], zoom); //Koordinaten immer als fixe Zahl
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
