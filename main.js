@@ -112,13 +112,19 @@ let map = L.map('map').setView([stop_lat, stop_lng], zoom); //Koordinaten immer 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
-
-
+L.control.scale({imperial: false, maxWidth: 200, position:"topright"}).addTo(map)
+// Vorschleife:
 // für jedes Element im Array wird das in der {} gemacht
 for (let stop of STOPS) {
     // Marker für den Stop
-    let marker = L.marker([stop.lat, stop.lng]).addTo(map)
-        .bindPopup(stop.title); 
+    let marker = L.marker([stop.lat, stop.lng], {
+        opacity: 0.5, 
+    
+    }).addTo(map)
+        .bindPopup(`<h3>${stop.title}</h3>
+        <a href="${stop.wikipedia}">Wikipedia</a>`
+        
+        ); 
         if (stop.user == "damerow") {
             marker.openPopup ();
             console.log("Mein Marker: ", stop);
