@@ -124,7 +124,8 @@ L.control.layers({
     "OpenTopoMap": OpenTopoMap,
 }).addTo(map);
 
-L.control.scale({ imperial: false, maxWidth: 200, position: "topright" }).addTo(map)
+//der Maßstab ist wieder links unten und ohne Meilenangabe:
+L.control.scale({ imperial: false, maxWidth: 200, position: "bottomleft" }).addTo(map)
 // Vorschleife:
 // für jedes Element im Array wird das in der {} gemacht
 for (let stop of STOPS) {
