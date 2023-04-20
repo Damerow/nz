@@ -126,36 +126,23 @@ L.control.layers({
 }).addTo(map);
 
 
+//Als Extrachallenge sollt ihr bei eurer Karte das Plugin Leaflet.fullscreen implementieren:
+L.control.scale({
+    imperial: false,
+    position: "bottomleft"
+}).addTo(map);
 
-//der Maßstab ist wieder links unten und ohne Meilenangabe:
-L.control.scale({ imperial: false, maxWidth: 200, position: "bottomleft" }).addTo(map)
-// Vorschleife:
-// für jedes Element im Array wird das in der {} gemacht
+map.addControl(new L.Control.Fullscreen());
+
 for (let stop of STOPS) {
-    // Marker für den Stop -> die Marker sind nicht mehr transparent sondern opaque (undursichtig)
+    //Marker erzeugen für den Stop 
     let marker = L.marker([stop.lat, stop.lng], {
-        opacity: 1,
-
-    }).addTo(map)
+        opacity: 1
+    })//Erstellung des Makers 
+        .addTo(map) //der Marker wird zur Karte hinzugefügt
         .bindPopup(`<h3>${stop.title}</h3>
-        <a href="${stop.wikipedia}">Wikipedia</a>`
-
-        );
-    if (stop.user == "damerow") {
+            <a href="${stop.wikipedia}">Wikipedia</a>
+            `); //das Pop Up wird erzeugt
+    if (stop.user == 'damerow')
         marker.openPopup();
-        console.log("Mein Marker: ", stop);
-
-        // Zwei Ist-gleich-Zeichen! Überprüfung ob beide Werte auf beiden Seiten stimmen
-
-    }
-
 }
-
-
-
-
-
-
-
-
-
