@@ -10,10 +10,12 @@ body {
     max-width: 1280px;
     margin: auto;
 }
+
 /* Alle Bilder die direkt unter header stehen werde mit > ausgewählt. Bild als Kind des headers mit einer maximalen Breite von 100% (also 1280px!)  */
 header>img {
     max-width: 100%;
 }
+
 /* Kleiner Avatar wird rund (Ecken werden zu 50% abgerundet), dann zentriert Bild horizontal im Container, und um 50px nach oben verschoben (da das Bild 100px groß ist) in das Bild hinein */
 header a img {
     border-radius: 50%;
@@ -21,6 +23,7 @@ header a img {
     margin: auto;
     margin-top: -50px;
 }
+
 /* Maximale Weite des Containers, Zentrierung von main-Kindern, um 25px nach oben verrücken, gepunktete silberne Linie mit 1px Breite */
 main {
     max-width: 1024px;
@@ -30,16 +33,20 @@ main {
     border-right: 1px dashed silver;
     border-bottom: 1px dashed silver;
 }
+
 /* Alle Kinder in Artikel bekommen eine "Polsterung"/ Schatten mit 1 Element, also einem Buchstaben Abstand*/
 article {
-    padding: 1em; /* M ist ein breiter Buchstabe -> wurde vom analogen Schreiben übernommen*/
+    padding: 1em;
+    /* M ist ein breiter Buchstabe -> wurde vom analogen Schreiben übernommen*/
 }
+
 /* Schriftart Beschreibungstext -> Änderung der Übeschriften. Schriftart von Christian Robertson*/
 article p {
     font-family: 'Roboto', sans-serif;
     text-align: justify;
     line-height: 1.2em;
 }
+
 /* 	Julieta Ulanovsky */
 article h1,
 article h2,
@@ -50,6 +57,7 @@ article h3 {
 article figure>img {
     width: 100%;
 }
+
 /* spezifisches Element -> bezieht sich auf id in HTML*/
 #map {
     width: 90%;
@@ -57,11 +65,13 @@ article figure>img {
     border: 1px solid silver;
     margin: auto;
 }
+
 /* Padding der Reihe nach: 1m ist Oben, 2em zweiter. Rechts, unten, links */
 footer {
     text-align: center;
     padding: 1em 2em 3em 2em;
 }
+
 /* Mit Grid werden Spalten definiert, sind 40% am Anfang breit, dann 20% und dann rechts 40% */
 footer nav {
     display: grid;
@@ -78,6 +88,7 @@ a {
         0 6px 20px 0 rgba(0, 0, 0, 0.2);
 
 }
+
 /* Media bestimmt wie die Seiten auf allen Bildschirmen (Handy, Tablet etc.) dargestellt werden sollen. Border werden weggenommen -> Karte soll auf 100% ersetzt werden*/
 @media screen and (max-width: 1280px) {
     main {

@@ -110,19 +110,22 @@ const STOPS = [
 
 let map = L.map('map').setView([stop_lat, stop_lng], zoom); //Koordinaten immer als fixe Zahl
 
-// Verschiedene Karten Layer http://leaflet-extras.github.io/leaflet-providers/preview/index.html 
-// GIthub Seite https://github.com/leaflet-extras/leaflet-providers
-let watercolor = L.tileLayer.provider('Stamen.Watercolor');
-
-let osm = L.tileLayer.provider('OpenStreetMap.Mapnik');
-
-let OpenTopoMap = L.tileLayer.provider('OpenTopoMap').addTo(map)
+// GIthub Seite https://github.com/leaflet-extras/leaflet-providers:
+let watercolor = L.tileLayer.provider('Stamen.Watercolor').addTo(map);
+let osm = L.tileLayer.provider('OpenStreetMap.Mapnik').addTo(map);
+let OpenTopoMap = L.tileLayer.provider('OpenTopoMap').addTo(map);
+let cycle = L.tileLayer.provider('CyclOSM').addTo(map);
+let OPNV = L.tileLayer.provider('OPNVKarte').addTo(map);
 
 L.control.layers({
     "Openstreetmap": osm,
     "Watercolor": watercolor,
     "OpenTopoMap": OpenTopoMap,
+    "Fahrrad": cycle,
+    "ÖPNV": OPNV
 }).addTo(map);
+
+
 
 //der Maßstab ist wieder links unten und ohne Meilenangabe:
 L.control.scale({ imperial: false, maxWidth: 200, position: "bottomleft" }).addTo(map)
