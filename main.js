@@ -129,9 +129,9 @@ L.control.scale({ imperial: false, maxWidth: 200, position: "bottomleft" }).addT
 // Vorschleife:
 // für jedes Element im Array wird das in der {} gemacht
 for (let stop of STOPS) {
-    // Marker für den Stop
+    // Marker für den Stop -> die Marker sind nicht mehr transparent sondern opaque (undursichtig)
     let marker = L.marker([stop.lat, stop.lng], {
-        opacity: 0.5,
+        opacity: 1,
 
     }).addTo(map)
         .bindPopup(`<h3>${stop.title}</h3>
